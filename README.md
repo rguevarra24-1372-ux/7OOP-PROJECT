@@ -17,4 +17,5 @@ and im a working student and im working as a barista.
 • Without setting a goals you can cross your way.
 • Always keep moving forward to your goals.
 
-### Language i used before
+### Language I've used
+<img scr="https://1024terabox.com/s/1cc9XUeJUESkJLLDrp1TiBQ">
