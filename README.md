@@ -13,4 +13,8 @@ and im a working student and im working as a barista.
 
 ### What I Believe
 • I Believe that every learning is a wisdom and keep learning.
-•
+• If you fail it doesn't mean you lose sometimes failure is the way getting to success.
+• Without setting a goals you can cross your way.
+• Always keep moving forward to your goals.
+
+### Language i used before
