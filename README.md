@@ -24,7 +24,7 @@ and im a working student and im working as a barista.
 <img width="50" height="50" alt="17564656412948525189692749180028" src="https://github.com/user-attachments/assets/c91b5b30-b88d-466f-9d76-c4dc9c352a36" />   ![175646577361398947004951790455](https://github.com/user-attachments/assets/4ee4db0b-503d-498c-b7f7-86874e9a529f)
 
 ### Project Link
-Midterm : 
+Midterm : ![Java project](https://github.com/rguevarra24-1372-ux/7OOP-PROJECT/blob/093aa77d0c5c0a72d277fd8611202a2e13de5a92/Java.%20My%20floder)
 
 ### Fun fact about me
 Im always out of my self but sometimes im too serious.
