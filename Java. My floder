@@ -1,0 +1,283 @@
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+	static Scanner scan = new Scanner(System.in);
+	static Random random = new Random ();
+	static File historyFile = new File("match_history.txt");
+
+	public static void pve() {
+		int playerScore = 0;
+		int computerScore = 0;
+		int match = 1;
+		
+		System.out.print("\033[H\033[2J");
+		System.out.print("Enter the number of points required to win: ");
+		int points = scan.nextInt();
+		scan.nextLine();
+		
+		System.out.print("\033[H\033[2J");
+		System.out.println("First Player to get "+points+" points WIN!");
+		System.out.print("Enter Player Name: ");
+		String playerName = scan.nextLine();
+		System.out.println();
+
+		for(int x = 1; playerScore<points && computerScore <points ; x++) {
+			System.out.println("ROUND "+x);
+			System.out.println("Type Rock,Paper,Scissor, or:");
+			System.out.println("1 - Rock");
+			System.out.println("2 - Paper");
+			System.out.println("3 - Scissor");
+			System.out.print("Answer: ");
+			String playerInput = scan.next();
+			int playerMove = convert(playerInput);
+			if(playerMove < 0) {
+				System.out.println("\nInvalid! Try Again\n");
+				x--;
+				continue;
+			}
+			System.out.println("\n"+playerName+": "+toMove(playerMove));
+			int computerMove = random.nextInt(3);
+			System.out.println("Computer: "+toMove(computerMove));
+
+			int res = result(playerMove,computerMove);
+			if(res == 0) {
+				System.out.println("=====WIN=====");
+				playerScore++;
+			} else if(res == 1) {
+				System.out.println("=====LOSE=====");
+				computerScore++;
+			} else {
+				System.out.println("=====DRAW=====");
+			}
+			System.out.println(playerName+": "+playerScore);
+			System.out.println("Computer: "+computerScore);
+			System.out.println();
+		}
+
+		String outcome;
+		if(playerScore>computerScore) {
+			outcome = playerName+" - W I N";
+		} else {
+			outcome = "Computer - W I N";
+		}
+		saveHistory(outcome+" (PvE)");
+		System.out.println(outcome);
+	}
+
+	public static void pvp() {
+		int[] playerScore= {0,0};
+		int[] playerMove = new int[2];
+		int match = 1;
+		int n = 0;
+		String[] playerName = new String[2];
+		String[] previewLine = new String[5];
+		String[] playerInput = new String[2];
+		
+		System.out.print("\033[H\033[2J");
+		System.out.print("Enter the number of points required to win: ");
+		int points = scan.nextInt();
+		scan.nextLine();
+		
+		System.out.print("\033[H\033[2J");
+		for(int x = 0; x<playerName.length; x++) {
+			System.out.println("First Player to get "+points+" points WIN!");
+			System.out.print("Enter Player "+(x+1)+" Name: ");
+			playerName[x] = scan.nextLine();
+			System.out.print("\033[H\033[2J");
+		}
+
+		for(int x = 1; playerScore[0]<points && playerScore[1] <points ; x++) {
+			for(int y=0; y<2; y++) {
+				if(x != 1 && n==0) {
+					for(int z = 0; z<5; z++) {
+						System.out.println(previewLine[z]);
+					}
+					System.out.println();
+				}
+				System.out.println("Round "+x);
+				System.out.println(playerName[y]+"'s turn...");
+				System.out.println("Type Rock,Paper,Scissor, or:");
+				System.out.println("1 - Rock");
+			System.out.println("2 - Paper");
+			System.out.println("3 - Scissor");
+				System.out.print("Answer: ");
+				playerInput[y] = scan.next();
+				playerMove[y] = convert(playerInput[y]);
+				if(playerMove[y] < 0) {
+					System.out.println("Invalid! Try Again\n");
+					y--;
+					n++;
+					continue;
+				}
+				n=0;
+				System.out.print("\033[H\033[2J");
+			}
+
+			int res = result(playerMove[0],playerMove[1]);
+			if(res == 0) {
+				previewLine[2] = "==="+playerName[0]+" WIN!===";
+				playerScore[0]++;
+			} else if(res == 1) {
+				previewLine[2] = "==="+playerName[1]+" WIN!===";
+				playerScore[1]++;
+			} else {
+				previewLine[2] = "=====DRAW!=====";
+			}
+			
+			String prevInput = toMove(playerMove[0]);
+			previewLine[0] = playerName[0]+": "+ prevInput;
+			previewLine[1] = playerName[1]+": "+ toMove(playerMove[1]);
+			previewLine[3] = playerName[0]+": "+playerScore[0];
+			previewLine[4] = playerName[1]+": "+playerScore[1];
+		}
+
+		for(int a = 0; a<5; a++) {
+			System.out.println(previewLine[a]);
+		}
+		System.out.println();
+
+		String outcome;
+		if(playerScore[0]>playerScore[1]) {
+			outcome = playerName[0]+" - WIN | "+playerName[1]+" - LOSE";
+		} else {
+			outcome = playerName[1]+" - WIN | "+playerName[0]+" - LOSE";
+		}
+		System.out.println(outcome);
+		saveHistory(outcome+" (PvP)");
+	}
+
+	public static void main(String[]args) {
+		while(true) {
+			System.out.println("\n======MENU======");
+			System.out.println("1 - Start");
+			System.out.println("2 - How to Play");
+			System.out.println("3 - Show History");
+			System.out.println("4 - Delete History");
+			System.out.println("5 - Exit");
+			System.out.print("Answer: ");
+			int menu = scan.nextInt();
+			scan.nextLine();
+
+			switch(menu) {
+			case 1:
+				System.out.println("\n======GAMEMODE======");
+				System.out.println("1 - PvE");
+				System.out.println("2 - PvP");
+				System.out.print("Answer: ");
+				int mode = scan.nextInt();
+				scan.nextLine();
+				System.out.println();
+				switch(mode) {
+				case 1:
+					pve();
+					break;
+				case 2:
+					pvp();
+					break;
+				}
+				break;
+				case 2:
+				instruction();
+				break;
+			case 3:
+				showHistory();
+				break;
+				case 4:
+				deleteHistory();
+				break;
+			case 5:
+				System.out.println("Goodbye!");
+				return;
+			default:
+				System.out.println("Invalid Answer! Try Again!");
+				break;
+			}
+		}
+	}
+
+	public static void saveHistory(String line) {
+		try(FileWriter writer = new FileWriter(historyFile,true)) {
+			writer.write(line+"\n");
+		} catch(IOException e) {
+			System.out.println("Error");
+		}
+	}
+
+	public static void showHistory() {
+		if(!historyFile.exists()) {
+			System.out.println("\nNo History Found");
+			return;
+		}
+		System.out.println("\n=====HISTORY=====");
+		try(Scanner fileReader = new Scanner(historyFile)) {
+			while(fileReader.hasNextLine()) {
+				System.out.println(fileReader.nextLine());
+			}
+		} catch(IOException e) {
+			System.out.println("Error");
+		}
+	}
+	
+	public static void deleteHistory(){
+		if(historyFile.delete()){
+			System.out.println("\nHistory File Successfully Deleted");
+		} else{
+			System.out.println("\nFailed to Delete History File");
+		}
+	}
+	
+	public static void instruction(){
+		System.out.println("\nHow to play:");
+		System.out.println("Player each turn must get to choose Rock, Paper, or Scissor.");
+		System.out.println("The winner determined by the rules:");
+		System.out.println("Rock beats Scissor,");
+		System.out.println("Paper beats Rock,");
+		System.out.println("Scissor beats Paper.");
+		System.out.println("First to get chosen number of points");
+		System.out.println("Win the Game!");
+	}
+
+	public static int result (int player,int foe) {
+		if(player==foe) {
+			return 2;
+		}
+		if(player == 0 && foe == 2 || player == 1 && foe == 0 || player == 2 && foe == 1) {
+			return 0;
+		}
+		return 1;
+	}
+	
+	public static int convert(String player) {
+		switch(player.toLowerCase()) {
+			case "1":
+		case "rock":
+			return 0;
+			case "2":
+		case "paper":
+			return 1;
+			case "3":
+		case "scissor":
+			return 2;
+		default:
+			return -1;
+		}
+	}
+
+	public static String toMove(int move) {
+		switch(move) {
+		case 0:
+			return "Rock";
+		case 1:
+			return "Paper";
+		case 2:
+			return "Scissor";
+		default:
+			return "Unknown";
+		}
+	}
+}
