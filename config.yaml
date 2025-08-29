@@ -18,15 +18,14 @@ portfolio:
     - "Always keep moving forward to your goals."
 
   languages_used:
-    - "Java"
-    - "Others (unspecified)"
-    icons:
-      - "https://github.com/user-attachments/assets/c91b5b30-b88d-466f-9d76-c4dc9c352a36"
-      - "https://github.com/user-attachments/assets/4ee4db0b-503d-498c-b7f7-86874e9a529f"
+    - name: "Java"
+      icon: "https://github.com/user-attachments/assets/c91b5b30-b88d-466f-9d76-c4dc9c352a36"
+    - name: "Other"
+      icon: "https://github.com/user-attachments/assets/4ee4db0b-503d-498c-b7f7-86874e9a529f"
 
   projects:
-    midterm:
-      name: "Java Project"
+    - name: "Java Project"
+      type: "Midterm"
       link: "https://github.com/rguevarra24-1372-ux/7OOP-PROJECT/blob/093aa77d0c5c0a72d277fd8611202a2e13de5a92/Java.%20My%20floder"
 
   fun_fact: "I'm always out of myself but sometimes I'm too serious."
@@ -38,11 +37,11 @@ portfolio:
     - "Fast learning"
 
   social_links:
-    facebook:
+    - platform: "Facebook"
       username: "renzo.guevarra.948"
       link: "https://www.facebook.com/renzo.guevarra.948?mibextid=ZbWKwL"
       icon: "https://github.com/user-attachments/assets/31944d66-4727-45e8-8ec8-5c61c1e011e8"
-    instagram:
+    - platform: "Instagram"
       username: "imnot_zo_ren"
       link: "https://www.instagram.com/imnot_zo_ren?igsh=dW5iYnk0ZGIwZXA3"
       icon: "https://github.com/user-attachments/assets/5df1a5be-9533-4410-9e5e-3a042f4876b5"
