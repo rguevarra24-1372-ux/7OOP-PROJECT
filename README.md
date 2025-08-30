@@ -31,9 +31,13 @@ Im always out of my self but sometimes im too serious.
 
 ### Skills
 • Teamwork
+
 • Communication
+
 • Adaptability 
+
 • Fast learning
+
 
 ### Connect with me
 <img width="75" height="75" alt="17564673522025139933998181155690" src="https://github.com/user-attachments/assets/31944d66-4727-45e8-8ec8-5c61c1e011e8" />    
