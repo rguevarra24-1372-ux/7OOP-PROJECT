@@ -27,7 +27,9 @@ and im a working student and im working as a barista.
 Midterm :[Java project](https://github.com/rguevarra24-1372-ux/7OOP-PROJECT/blob/093aa77d0c5c0a72d277fd8611202a2e13de5a92/Java.%20My%20floder)      
 Midterm :[Lab Task 1](Midterm%20Lab%20Task/Lab%20Task%201)       
 Midterm :[Lab Task 2](Midterm%20Lab%20Task/Lab%20Task%202)          
-Midterm :[Lab Task 3](Midterm%20Lab%20Task/Lab%20Task%203)
+Midterm :[Lab Task 3](Midterm%20Lab%20Task/Lab%20Task%203)        
+Midterm :[Lab Task 4](Midterm%20Lab%20Task/Lab%20Task%204)          
+Midterm :[Lab Task 5](Midterm%20Lab%20Task/Lab%20Task%205)
 
 
 ### Fun fact about me
