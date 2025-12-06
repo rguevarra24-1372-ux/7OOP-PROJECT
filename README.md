@@ -32,6 +32,13 @@ Midterm :[Lab Task 4](https://github.com/rguevarra24-1372-ux/7OOP-PROJECT/tree/m
 Midterm :[Lab Task 5](https://github.com/rguevarra24-1372-ux/7OOP-PROJECT/tree/main/Midterm%20Lab%20Task/Lab%20Task%205)
 
 
+Final :[Lab Task 1]    
+Final :[Lab Task 2]    
+Final :[Lab Task 3]    
+Final :[Lab Task 4]    
+Final :[Lab Task 5]   
+Final :[Lab Task 6]   
+
 ### Fun fact about me
 Im always out of my self but sometimes im too serious.
 
