@@ -34,8 +34,8 @@ Midterm :[Lab Task 5](https://github.com/rguevarra24-1372-ux/7OOP-PROJECT/tree/m
 
 Final :[Lab Task 1](https://github.com/rguevarra24-1372-ux/7OOP-PROJECT/blob/main/Final%20Term%20Lab%20Tasks/Lab%20Task%201/FL1%20Guevarra%2CRenzo%20S..pdf)   
 Final :[Lab Task 2](https://github.com/rguevarra24-1372-ux/7OOP-PROJECT/blob/main/Final%20Term%20Lab%20Tasks/Lab%20Task%201/FL2%20Guevarra%2C%20Renzo%20S..pdf)    
-Final :[Lab Task 3]    
-Final :[Lab Task 4]    
+Final :[Lab Task 3](https://github.com/rguevarra24-1372-ux/7OOP-PROJECT/blob/main/Final%20Term%20Lab%20Tasks/Lab%20Task%201/FL3%20Guevarra%2C%20Renzo%20S..pdf)    
+Final :[Lab Task 4](https://github.com/rguevarra24-1372-ux/7OOP-PROJECT/blob/main/Final%20Term%20Lab%20Tasks/Lab%20Task%201/FL4%20Guevarra%2C%20Renzo%20S..pdf)    
 Final :[Lab Task 5]   
 Final :[Lab Task 6]   
 
